@@ -1,0 +1,58 @@
+
+#include <stdio.h>
+
+int mes(int m){
+    if(m==1){
+        return printf("janeiro");
+    }
+    else if(m==2){
+        return printf("fevereiro");
+    }
+    else if(m==3){
+        return printf("marco");
+    }
+    else if(m==4){
+        return printf("abril");
+    }
+    else if(m==5){
+        return printf("maio");
+    }
+    else if(m==6){
+        return printf("junho");
+    }
+    else if(m==7){
+        return printf("julho");
+    }
+    else if(m==8){
+        return printf("agosto");
+    }
+    else if(m==9){
+        return printf("setembro");
+    }
+    else if(m==10){
+        return printf("outubro");
+    }
+    else if(m==11){
+        return printf("novembro");
+    }
+    else if(m==12){
+        return printf("dezembro");
+    }
+    else {
+        return printf("data invalida");
+    }
+}
+
+int main(){
+int d, m, a;
+    printf("Digite um dia: ");
+    scanf("%d" , &d);
+    printf("\nDigite um mes: ");
+    scanf("%d" , &m);
+    printf("\nDigite um ano: ");
+    scanf("%d" , &a);
+    printf("\n%d" , d);
+    printf("de %d" , mes(m));
+    printf(" de %d" , a);
+return 0;
+}
