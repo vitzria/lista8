@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float volume(int r){
+    return (4 * 3.14 * pow(r,3))/3;
+}
+int main(){
+    float r;
+    printf("Digite o raio: ");
+    scanf("%f" , &r);
+    printf("O volume eh: %2.f" , volume(r));
+    return 0;
+}
