@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int funcao(int x){
+    if(x>0){
+        return 1;
+    }
+    if(x==0){
+        return 0;
+    }
+    else{
+        return -1;
+    }
+}
+int main(){
+    int x;
+    printf("digite um valor: ");
+    scanf("%d" , &x);
+    printf("%d" , funcao(x));
+return 0;
+}
