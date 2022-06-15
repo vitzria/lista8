@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+void hipotenusa (int a, int b, int c){
+int p_a= pow(a,2);
+int p_b= pow(b,2);
+int p_c= pow(c,2);
+p_c = p_a + p_b;
+c= sqrt(p_c);
+printf("A hipotenusa eh %d" , c);
+}
+int main()
+{
+    int a,b,c;
+    printf("Cateto a: ");
+    scanf("%d" , &a);
+    printf("Cateto b: ");
+    scanf("%d" , &b);
+    hipotenusa(a,b,c);
+return 0;
+}
