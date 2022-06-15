@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+void funcao(a,b){
+    if (a>b){
+        printf("%d eh maior" , a);
+    }
+    else if (a<b){
+        printf("%d eh maior" , b);
+    }
+    else {
+        printf("os valores sao iguais");
+    }
+}
+int main()
+{
+    int a,b;
+    printf("Digite o valor A: ");
+    scanf("%d" , &a);
+    printf("Digite o valor b: ");
+    scanf("%d" , &b);
+    funcao(a,b);
+return 0;
+}
