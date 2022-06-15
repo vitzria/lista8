@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <math.h>
+void quadrado(float x){
+    int aux;
+    float raiz;
+    raiz=sqrt(x);
+    if (raiz>0 && raiz==aux){
+        printf("\neh um quadrado perfeito");
+    }
+    else{
+        printf("\nnao eh um quadrado perfeito");
+    }
+}
+int main()
+{
+    int aux;
+    float x;
+    printf("Digite um valor: ");
+    scanf("%f" , &x);
+    quadrado(x);
+return 0;
+}
