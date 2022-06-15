@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<stdlib.h>
+void horario(int hora, int minuto, int segundo){
+    int hora_c, minuto_c, horario_c;
+    hora_c=hora*3600;
+    minuto_c=minuto*60;
+    horario_c=hora_c+minuto_c+segundo;
+    printf("%d" , horario_c);
+}
+int main()
+{
+    int hora, minuto, segundo;
+    printf("hora: ");
+    scanf("%d" , &hora);
+    printf("\nminuto: ");
+    scanf("%d" , &minuto);
+    printf("\nsegundo: ");
+    scanf("%d" , &segundo);
+    horario(hora, minuto, segundo);
+return 0;    
+}
