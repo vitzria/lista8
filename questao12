@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int desenhalinha(int n){
+    int i, vetor [n];
+    for(i=0;i<n;i++){
+        printf("=");
+    }
+return 0;
+}
+int main()
+{
+    int n;
+    printf("Digite a quantidade de linhas: ");
+    scanf("%d" , &n);
+    desenhalinha(n);
+return 0;
+}
