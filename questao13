@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+int somaNum(int x, int y){
+int i, conta=0;
+    if(x<y){
+        for(i=x;i<=y;i++){
+        conta=conta+i;
+        }
+    }
+    else if(x>y){
+        for(i=y;i<=x;i++){
+        conta=conta+i;
+        }
+    }
+    else{
+        conta=0;
+    }
+    printf("\n%d" , conta);
+}
+int main()
+{
+    int x, y;
+    printf("Digite o valor de X: ");
+    scanf("%d" , &x);
+    printf("\nDigite o valor de Y: ");
+    scanf("%d" , &y);
+    somaNum(x,y);
+return 0;
+}
