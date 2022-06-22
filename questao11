@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int soma=0;
+int funcao(int n){
+    if(n>0){
+        soma=(n/10)+(n%10);
+        printf("\nSoma dos algarismos: %d" , soma);
+        return 0;
+    }
+    else{
+        printf("\nValor invalido");
+        return 0;
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Digite um numero maior que 0: ");
+    scanf("%d" , &n);
+    funcao(n);
+return 0;
+}
