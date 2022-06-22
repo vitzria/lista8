@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+float ma=0, mp=0;
+float media(float x, float y, float z, char letra){
+    if(letra=='A'){
+        ma=(x+y+z)/3;
+        printf("\nMedia aritimetica: %f" , ma);
+        return 0;
+    }
+    else if(letra=='P'){
+        mp=((x*5)+(y*3)+(z*2))/(5+3+2);
+        printf("\nMedia ponderada: %f" , mp);
+        return 0;
+    }
+    else if(letra=='S'){
+        return 0;
+    }
+    else{
+        printf("\nValor invalido");
+    }
+}
+int main()
+{
+    float x, y, z;
+    char letra;
+        printf("\nDigite a nota 1: ");
+        scanf("%f" , &x);
+        printf("\nDigite a nota 2: ");
+        scanf("%f" , &y);
+        printf("\nDigite a nota 3: ");
+        scanf("%f" , &z);
+        printf("Digite A para a media aritimetica, P para a ponderada e S para sair: ");
+        scanf("%s" , &letra);
+        media(x,y,z,letra);
+return 0;
+}
