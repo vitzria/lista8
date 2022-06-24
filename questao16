@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int par=0;
+int funcao(int n){
+    int i, funcao[n];
+    for(i=0;i<n;i++){
+            printf("Digite o valor %d: " , i+1);
+            scanf("%d" , &funcao[i]);
+        }
+    for(i=0;i<n;i++){
+        if(funcao[i]%2==0){
+            par++;
+        }
+    }
+}
+int main()
+{
+    int n, i;
+    printf("Digite o tamanho do vetor: ");
+    scanf("%d" , &n);
+    int vetor[n];
+    funcao(n);
+    printf("%d numeros pares" , par);
+return 0;
+}
