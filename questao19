@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+int contador=0;
+int funcao(int x, int y){
+int i, j, matriz[x][y];
+    for(i=0;i<x;i++){
+        for(j=0;j<y;j++){
+            printf("Digite o valor %d %d: " , i+1, j+1);
+            scanf("%d" , &matriz[i][j]);
+        }
+    }
+    for(i=0;i<x;i++){
+        for(j=0;j<y;j++){
+                if(matriz[i][j]>10){
+                    contador++;
+                }
+        }
+    }
+}
+int main()
+{
+    int x, y;
+    printf("Digite a quant de linhas: ");
+    scanf("%d" , &x);
+    printf("Digite a quant de colunas: ");
+    scanf("%d" , &y);
+    funcao(x,y);
+    printf("%d numeros maiores que 10" , contador);
+return 0;
+}
