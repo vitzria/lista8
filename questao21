@@ -1,0 +1,60 @@
+/******
+Escreva uma função que recebe uma matriz quadrada de ordem N e calcule a sua transposta.
+******/
+#include <stdio.h>
+#include <stdlib.h>
+int transposta(int **matriz, int N){
+int i, j, **matrizT;
+    matrizT=(int**)malloc(N*sizeof(int*));
+        if(matrizT==NULL){
+            printf("Memoria insuficiente");
+            exit(1);
+        }
+    for(i=0;i<N;i++){
+        matrizT[i]=(int*)malloc(N*sizeof(int));
+        if(matrizT[i]==NULL){
+            printf("Memoria insuficiente");
+            exit(1);
+        }
+        for(j=0;j<N;j++){
+            matrizT[i][j]=matriz[j][i];
+            }
+        }
+return matrizT;
+}
+int main()
+{
+    int N, **matriz, i, j, **matrizT;
+    printf("Digite a ordem da matriz: ");
+    scanf("%d" , &N);
+    matriz=(int**)malloc(N*sizeof(int*));
+        if(matriz==NULL){
+            printf("Memoria insuficiente");
+            exit(1);
+        }
+        for(i=0;i<N;i++){
+            matriz[i]=(int*)malloc(N*sizeof(int));
+            if(matriz[i]==NULL){
+            printf("Memoria insuficiente");
+            exit(1);
+            }
+            for(j=0;j<N;j++){
+                printf("\nDigite o valor %d %d: " , i+1, j+1);
+                scanf("%d" , &matriz[i][j]);
+            }
+        }
+        printf("\nMatriz Original:\n");
+        for(i=0;i<N;i++){
+            for(j=0;j<N;j++){
+                printf("\t%d" , matriz[i][j]);
+            }
+        }
+        printf("\nMatriz Transposta:\n");
+matrizT=transposta(matriz,N);
+    for(i=0;i<N;i++){
+        for(j=0;j<N;j++){
+            printf("\t%d" , matrizT[i][j]);
+        }
+    }
+return 0;
+}
