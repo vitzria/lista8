@@ -1,0 +1,50 @@
+/******
+Faça uma função que verifica se uma matriz quadrada de ordem N é a matriz identidade.
+******/
+#include <stdio.h>
+#include <stdlib.h>
+void identidade(int **matriz, int n){
+int i, j, id=1;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+               if(matriz[i][j]!=1 && i==j){
+                    id=0;
+               }
+               else if(i!=j && matriz[i][j]!=0){
+                    id=0;
+               }
+            }
+        }
+        if(id==1){
+            printf("\nA matriz eh identidade");
+        }
+        else{
+            printf("\nA matriz nao eh identidade");
+        }
+}
+int main()
+{
+    int n, **matriz, i, j;
+        printf("Digite a ordem da matriz: ");
+        scanf("%d" , &n);
+
+        matriz=(int**)malloc(n*sizeof(int*));
+            if(matriz==NULL){
+                printf("\nMemoria insuficiente");
+                exit(1);
+            }
+        for(i=0;i<n;i++){
+            matriz[i]=(int*)malloc(n*sizeof(int));
+                if(matriz==NULL){
+                    printf("\nMemoria insuficiente!");
+                    exit(1);
+                }
+            for(j=0;j<n;j++){
+                printf("\nDigite o valor %d %d: " , i+1, j+1);
+                scanf("%d" , &matriz[i][j]);
+            }
+        }
+        identidade(matriz, n);
+
+return 0;
+}
