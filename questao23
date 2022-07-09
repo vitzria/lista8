@@ -1,0 +1,38 @@
+/******
+Faça uma função que recebe, por parâmetro, uma matriz A[4][4] e retorna a soma dos seus
+elementos.
+******/
+#include <stdio.h>
+#include <stdlib.h>
+int somaMatriz(int **matriz){
+int i, j, soma=0;
+    for(i=0;i<4;i++){
+        for(j=0;j<4;j++){
+            soma += matriz[i][j];
+        }
+    }
+return soma;
+}
+int main()
+{
+    int **matriz, i, j, soma;
+    matriz=(int**)malloc(4*sizeof(int*));
+    if(matriz==NULL){
+        printf("Memoria insuficiente");
+        exit(1);
+    }
+        for(i=0;i<4;i++){
+        matriz[i]=(int*)malloc(4*sizeof(int));
+            if(matriz[i]==NULL){
+            printf("Memoria insuficiente");
+            exit(1);
+            }
+            for(j=0;j<4;j++){
+                printf("\nDigite o valor %d %d: " , i+1, j+1);
+                scanf("%d" , &matriz[i][j]);
+            }
+        }
+    soma=somaMatriz(matriz);
+    printf("\nSoma dos elementos: %d" , soma);
+return 0;
+}
